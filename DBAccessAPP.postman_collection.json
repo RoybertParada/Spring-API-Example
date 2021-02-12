@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "d4b073b8-026c-41c2-9230-dc8607ee466f",
+		"name": "DBAccess APP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Instructors",
+			"item": [
+				{
+					"name": "/api/instructors/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/instructors/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"instructors",
+								"all"
+							]
+						},
+						"description": "Obtiene todos los instructores de la base de datos."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instructors/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/instructors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"instructors",
+								"1"
+							]
+						},
+						"description": "Obtiene el instructor por el Id Indicado"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instructors/name/{name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/instructors/name/Juan Perez",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"instructors",
+								"name",
+								"Juan Perez"
+							]
+						},
+						"description": "Obtiene el Instructor dado el nombre."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instructors/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Karen Soto\",\r\n    \"description\": \"Descripcion Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/instructors/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"instructors",
+								"save"
+							]
+						},
+						"description": "Crea un nuevo instructor"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/instructors/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/instructors/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"instructors",
+								"delete",
+								"5"
+							]
+						},
+						"description": "Elimina el instructor segun el Id"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Courses",
+			"item": [
+				{
+					"name": "/api/courses/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/courses/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"courses",
+								"all"
+							]
+						},
+						"description": "Obtiene todos los cursos."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/courses/{id}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/courses/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"courses",
+								"1"
+							]
+						},
+						"description": "Obtiene el curso segun el Id"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/courses/name/{name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/courses/name/Sistema de Informacion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"courses",
+								"name",
+								"Sistema de Informacion"
+							]
+						},
+						"description": "Obtiene el curso segun el nombre indicado"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/courses/delete/{id}",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/courses/delete/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"courses",
+								"delete",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/api/courses/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Inginieria de Software\",\r\n    \"description\": \"Curso D Descripcion\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/courses/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"courses",
+								"save"
+							]
+						},
+						"description": "Guarada el curso Indicado."
+					},
+					"response": []
+				},
+				{
+					"name": "/api/courses/instructors/{coursesId}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/courses/instructors/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"courses",
+								"instructors",
+								"1"
+							]
+						},
+						"description": "Obtiene los instructores asociados al curso segun el Id."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Period",
+			"item": [
+				{
+					"name": "/api/period/save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"periodId\": \"Q4\",\r\n    \"year\": \"2021\",\r\n    \"inicio\": \"2021-09-30T20:00:00\",\r\n    \"fin\": \"2021-12-30T20:00:00\",\r\n    \"instructor\": {\r\n        \"instructorDomainId\": 4\r\n    },\r\n    \"curso\": {\r\n        \"courseId\": 1\r\n    }\r\n}  ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/period/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"period",
+								"save"
+							]
+						},
+						"description": "Agregra un Instructor a un curso en determinado periodo"
+					},
+					"response": []
+				},
+				{
+					"name": "/api/period/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cursoId\":1,\r\n    \"instructorId\":4,\r\n    \"periodoId\": \"Q4\",\r\n    \"year\":\"2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/api/period/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"period",
+								"delete",
+								"1"
+							]
+						},
+						"description": "Elimina la relacion entre un curso y un instructor."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
