@@ -1,15 +1,15 @@
 package com.dbacess.example.app.domain;
 
 public class Course {
-    private int courseId;
+    private Long courseId;
     private String name;
     private String description;
 
-    public int getCourseId() {
+    public Long getCourseId() {
         return courseId;
     }
 
-    public void setCourseId(int courseId) {
+    public void setCourseId(Long courseId) {
         this.courseId = courseId;
     }
 

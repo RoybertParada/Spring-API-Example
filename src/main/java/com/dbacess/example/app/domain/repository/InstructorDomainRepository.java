@@ -1,12 +1,15 @@
 package com.dbacess.example.app.domain.repository;
 
-import com.dbacess.example.app.domain.InstructorDomain;
+import com.dbacess.example.app.domain.InstructorDTO;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface InstructorDomainRepository {
-    List<InstructorDomain> getAll();
-    Optional<List<InstructorDomain>> getByCourse(int courseId);
-    InstructorDomain save(InstructorDomain instructor);
+    List<InstructorDTO> getAll();
+    InstructorDTO save(InstructorDTO instructor);
+    List<InstructorDTO> findAllInstructorsByCourse(Long courseId);
+    Optional<InstructorDTO> getInstructor(Long instructorId);
+    Optional<InstructorDTO> findByNombre(String name);
+    void deleteById(Long instructorId);
 }

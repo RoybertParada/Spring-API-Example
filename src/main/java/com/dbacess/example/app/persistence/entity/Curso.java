@@ -1,24 +1,28 @@
 package com.dbacess.example.app.persistence.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "CURSO")
+@Table(name = "curso")
 public class Curso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cursoId")
-    private Integer cursoId;
+    @Column(name = "cursoid")
+    private Long cursoId;
 
     private String nombre;
     private String descripcion;
 
-    public Integer getCursoId() {
+    @OneToMany(mappedBy = "curso")
+    private List<Periodo> periodos;
+
+    public Long getCursoId() {
         return cursoId;
     }
 
-    public void setCursoId(Integer cursoId) {
+    public void setCursoId(Long cursoId) {
         this.cursoId = cursoId;
     }
 
@@ -36,5 +40,13 @@ public class Curso {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public List<Periodo> getPeriodos() {
+        return periodos;
+    }
+
+    public void setPeriodos(List<Periodo> periodos) {
+        this.periodos = periodos;
     }
 }

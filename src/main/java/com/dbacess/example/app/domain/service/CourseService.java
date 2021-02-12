@@ -18,11 +18,11 @@ public class CourseService {
         return courseRepository.getAll();
     }
 
-    public Optional<List<Course>> getByInstructor(int instructorId){
-        return courseRepository.getByInstructor(instructorId);
+    public Optional<Course> getByNombre(String nombre){
+        return courseRepository.getByNombre(nombre);
     }
 
-    public Optional<Course> getCourse(int courseId) {
+    public Optional<Course> getCourse(Long courseId) {
         return courseRepository.getCourse(courseId);
     }
 
@@ -30,7 +30,7 @@ public class CourseService {
         return courseRepository.save(course);
     }
 
-    public boolean delete(int courseId) {
+    public boolean delete(Long courseId) {
         return getCourse(courseId).map(course -> {
             courseRepository.delete(courseId);
             return true;

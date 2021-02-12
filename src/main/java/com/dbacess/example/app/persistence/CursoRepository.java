@@ -25,13 +25,12 @@ public class CursoRepository implements CourseRepository {
     }
 
     @Override
-    public Optional<List<Course>> getByInstructor(int instructorId) {
-        return cursoCrudRepository.findByInstructorId(instructorId)
-                .map(cursos -> mapper.toCourses(cursos));
+    public Optional<Course> getByNombre(String nombre) {
+        return cursoCrudRepository.findByNombre(nombre).map(curso -> mapper.toCourse(curso));
     }
 
     @Override
-    public Optional<Course> getCourse(int courseId) {
+    public Optional<Course> getCourse(Long courseId) {
         return cursoCrudRepository.findById(courseId).map(curso-> mapper.toCourse(curso));
     }
 
@@ -42,7 +41,7 @@ public class CursoRepository implements CourseRepository {
     }
 
     @Override
-    public void delete(int courseId) {
+    public void delete(Long courseId) {
         cursoCrudRepository.deleteById(courseId);
     }
 }
